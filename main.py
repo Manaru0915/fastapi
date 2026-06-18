@@ -35,3 +35,9 @@ def index():
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
+    @app.post("/artist")
+async def artist(name):
+    return {
+        "message": f"{name}は私の好きなアーティストです。特にONE OK ROCKがおすすめです。"
+    }
